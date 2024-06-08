@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Películas</title>
+    <style>
+        /* CSS opcional para estilizar */
+        .pelicula {
+            display: none; /* Ocultar todas las películas por defecto */
+        }
+    </style>
+</head>
+<body>
+    <div class="filtro-peliculas">
+        <label for="genero">Género:</label>
+        <select id="genero">
+            <option value="">Todos</option>
+            <option value="accion">Acción</option>
+            <option value="comedia">Comedia</option>
+            <option value="drama">Drama</option>
+        </select>
+    </div>
+
+    <div id="lista-peliculas">
+        <div class="pelicula" data-genero="accion">Película de Acción 1</div>
+        <div class="pelicula" data-genero="comedia">Película de Comedia 1</div>
+        <div class="pelicula" data-genero="drama">Película de Drama 1</div>
+        <div class="pelicula" data-genero="accion">Película de Acción 2</div>
+        <div class="pelicula" data-genero="comedia">Película de Comedia 2</div>
+        <div class="pelicula" data-genero="drama">Película de Drama 2</div>
+    </div>
+
+    <script>
+        document.getElementById('genero').addEventListener('change', function() {
+            var genero = this.value;
+            var peliculas = document.querySelectorAll('.pelicula');
+            
+            peliculas.forEach(function(pelicula) {
+                if (genero === '' || pelicula.dataset.genero === genero) {
+                    pelicula.style.display = 'block';
+                } else {
+                    pelicula.style.display = 'none';
+                }
+            });
+        });
+
+        // Inicializar mostrando todas las películas
+        document.getElementById('genero').dispatchEvent(new Event('change'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tendencias de Películas 2024</title>
+   
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <header>
+        <h1>Tendencias de Películas en 2024</h1>
+        <nav>
+            <ul>
+            <a href="khfjg.html">Inicio      </a>
+            <a href="4345634.html">Categorías</a>
+            <a href="2345h.html">Estrenos    </a>
+            </ul>
+        </nav>
+        <div class="filtro-peliculas">
+            <label for="genero">Género:</label>
+            <select id="genero">
+                <option value="">Todos</option>
+                <option value="accion">Acción</option>
+                <option value="comedia">Comedia</option>
+                <option value="drama">Drama</option>
+                <option value="terror">terror</option>
+                <option value="parareflexionar">Para reflexionar</option>
+            </select>
+        </div>
+    
+        <script>
+            document.getElementById('genero').addEventListener('change', function() {
+                var genero = this.value;
+                var peliculas = document.querySelectorAll('.pelicula');
+                
+                peliculas.forEach(function(pelicula) {
+                    if (genero === '' || pelicula.dataset.genero === genero) {
+                        pelicula.style.display = 'block';
+                    } else {
+                        pelicula.style.display = 'none';
+                    }
+                });
+            });
+    
+            // Inicializar mostrando todas las películas
+            document.getElementById('genero').dispatchEvent(new Event('change'));
+        </script>
+    </header>
+
+    <main>
+        <section class="seccion-generos">
+            <h2>Géneros en auge</h2>
+
+            <div id="lista-peliculas">
+
+                
+
+                <div class="pelicula" data-genero="accion"><div class="peliculas"></div>
+
+                    
+                  <img src="descargasss.jpg" alt="Poster de Dune">
+                  <h3>Dune</h3>
+                  <p>Ciencia ficción épica basada en la novela de Frank Herbert.</p>
+                    
+                </div>
+
+                <div class="pelicula" data-genero="terror"><div class="peliculas"></div>
+                    
+                    <img src="x.jpg" alt="Poster de X">
+                    <h3>X</h3>
+                    <p>Película de terror slasher original y aclamada por la crítica.</p> 
+                    
+               </div>
+                
+                <div class="pelicula" data-genero="comedia"><div class="peliculas"></div>
+
+                    <img src="red.jpg" alt="Poster de Turning Red">
+                    <h3>Turning Red</h3>
+                    <p>Animación de Pixar sobre la pubertad y las relaciones familiares.</p>
+                </div>
+
+
+                <div class="pelicula" data-genero="drama"><div class="peliculas"></div>
+
+                    <img src="cods.jpg" alt="Poster de CODA">
+                    <h3>CODA</h3>
+                    <p>Drama sobre una familia sorda que gana el Oscar a la mejor película.</p>
+
+                </div>
+
+                
+                
+                <div class="pelicula" data-genero="accion"><div class="peliculas"></div>
+
+                    <img src="dog.jpg" alt="Poster de The Power of the Dog">
+                    <h3>The Power of the Dog</h3>
+                    <p>Película de autor con una narrativa compleja y una ambientación atmosférica.</p>
+
+                </div>
+
+                
+                
+                <div class="pelicula" data-genero="comedia"><div class="peliculas"></div>
+
+                    <img src="guy.jpg" alt="Poster de Free Guy">
+                    <h3>Free Guy</h3>
+                    <p>Comedia original que mezcla acción, ciencia ficción y humor.</p>
+
+                </div>
+
+                <div class="pelicula" data-genero="drama"><div class="peliculas"></div>
+
+                    <img src="petite.jpg" alt="Poster de Petite Maman">
+                    <h3>Petite Maman</h3>
+                    <p>Película francesa de cine independiente sobre la relación entre dos niñas.</p>
+
+                </div>
+
+
+                <div class="pelicula" data-genero="parareflexionar"><div class="peliculas"></div>
+
+                    <img src="the.jpg" alt="Poster de The Banshees of Inisherin">
+                    <h3>The Banshees of Inisherin</h3>
+                    <p>Película que explora la soledad y el aislamiento en una comunidad rural.</p>
+
+                </div>
+
+
+                <div class="pelicula" data-genero="parareflexionar"><div class="peliculas"></div>
+
+                    <img src="dont.jpg" alt="Poster de Don't Look Up">
+                    <h3>Don't Look Up</h3>
+                    <p>Sátira que critica la indiferencia ante el cambio climático.</p>
+
+                </div>
+
+
+                <div class="pelicula" data-genero="terror"><div class="peliculas"></div>
+
+                    <img src="Terrifier.jpg" alt="Poster de Terrifier">
+                    <h3>Terrifier</h3>
+                    <p>Es una película estadounidense de terror escrita, coproducida y dirigida por Damien Leone.</p>
+
+                </div>
+
+
+
+            </div>
+        
+
+
+        </section>
+
+
+       
+
+
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tendencias de Películas</p>
+    </footer>
+</body>
+</html>
